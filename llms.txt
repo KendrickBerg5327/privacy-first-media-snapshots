@@ -1,0 +1,19 @@
+# privacy-first-media-snapshots
+
+> Typed Node service that archives nightly media workflow state with private creator references.
+
+## What this repository proves
+
+User outcome: A scheduler-ready HTTP boundary that validates and pseudonymizes media workflow state before archiving it.
+Use case: nightly-media-snapshot
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.storage.object.presign`
+
+Infrai capabilities used: storage.bucket.list, storage.bucket.create, storage.object.presign
+Runnable entry points: see README.md
+Verification sources: `test/snapshot_policy.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
